@@ -1,16 +1,22 @@
 from tkinter import *
 
+
+
 window = Tk()
 window.title("Mile to Km Converter")
-window.minsize(width=400, height=200)
+
+
 
 
 def calculate_miles():
-    return_data = float(data_input.get()) * 1.60934
-    output_text.config(text=round(return_data, 2))
+    if data_input.get() == "":
+        output_text.config(text=0)
+    else:
+        return_data = float(data_input.get()) * 1.60934
+        output_text.config(text=round(return_data, 2))
 
 
-#centering attempt
+
 
 #text label
 is_equal_to_label = Label(text="is equal to")
